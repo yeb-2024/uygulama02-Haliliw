@@ -50,6 +50,7 @@ public class GirisSayfasi implements ActionListener {
 
         frame.add(panelUst);
         frame.add(panelAlt);
+        frame.add(button);
         frame.setVisible(true);
     }
 
@@ -63,6 +64,30 @@ public class GirisSayfasi implements ActionListener {
                 JOptionPane.showMessageDialog(
                         null,
                         "Lütfen Tüm Alanları Doldurunuz!",
+                        "Hata",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+
+            else if (sifre.length() < 5){
+                JOptionPane.showMessageDialog(
+                        null,
+                        "Minimun 5 Karakter Olamlı!",
+                        "Hata",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+
+            else if (kullaniciAdi.equals("Halil") && sifre.equals("12345")){
+                JOptionPane.showMessageDialog(
+                        null,
+                        "Giriş Başarılı",
+                        "Başarılı",
+                        JOptionPane.INFORMATION_MESSAGE);
+            }
+
+            else{
+                JOptionPane.showMessageDialog(
+                        null,
+                        "Kullanıcı Adı veya Şifre Hatalı",
                         "Hata",
                         JOptionPane.ERROR_MESSAGE);
             }
